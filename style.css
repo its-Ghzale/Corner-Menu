@@ -1,0 +1,89 @@
+*{
+    margin: 10px;
+    padding: 5px;
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0;
+}
+.circle-menu{
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+}
+.circle-menu .menu-btn{
+    display: block;
+    width: 3.5em;
+    height: 3.5em;
+    border-radius: 50%;
+    background-color: purple;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+    color: white;
+    cursor:pointer;
+    text-align: center;
+    line-height: 3.8;
+}
+.ch{
+    font-size: 1.5em;
+    position: absolute;
+    top: -16px;
+    color: white;
+    left: 14px;
+}
+.active .menu-btn{
+    box-shadow: 0 0 3px rgba(0, 0, 0, .3);
+}
+.circle-menu .menu-btn:active{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .3);
+}
+.circle-menu .menu-btn i{
+    transition: transform .2s;
+}
+.active .menu-btn:hover i{
+    transform: rotate(-45deg);
+}
+.circle-menu::after{
+    content: '';
+    display: block;
+    width: 3.5em;
+    height: 3.5em;
+    border-radius: 50%;
+    background-color: rgb(158, 6, 158);
+    position: absolute;
+    top: 0;
+    transition: all .3s ease;
+    z-index: -2;
+}
+.active::after{
+    transform: scale3d(5,5,1);
+    transition: all .2s ease;
+}
+.circle-menu .items-wrapper i{
+    position: absolute;
+    top: .2em;
+    right: .2em;
+    display: block;
+    width: 3em;
+    height: 3em;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 3;
+    background-color: rgba(0, 0, 0, .1);
+    z-index: -1;
+    transition: transform .3s es4,background-color .2s ease;
+}
+.circle-menu .items-wrapper i:hover{
+    background-color: rgba(0, 0, 0, .3);
+}
+.active .ch1{
+    transform: translate3d(1em,-6em,0);
+}
+.active .ch2{
+    transform: translate3d(-3em,-5.25em,0);
+}
+.active .ch3{
+    transform: translate3d(-5.5em,-2.5em,0);
+}
+.active .ch4{
+    transform: translate3d(-6em,1em,0);
+}
